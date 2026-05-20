@@ -7,7 +7,7 @@ export default function Particles() {
   useEffect(() => {
     const canvas = ref.current;
     if (!canvas) return;
-    const ctx = canvas.getContext("2d");
+    const ctx = canvas.getContext("2d", { willReadFrequently: false, alpha: true });
     let raf;
     let particles = [];
     const setSize = () => {

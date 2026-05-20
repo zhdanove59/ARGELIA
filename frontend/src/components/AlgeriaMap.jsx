@@ -88,6 +88,7 @@ export default function AlgeriaMap() {
                 return (
                   <g
                     key={c.id}
+                    data-testid={`map-pin-${c.id}`}
                     onMouseEnter={() => setHovered(i)}
                     onMouseLeave={() => setHovered(null)}
                     onClick={() => setHovered(i)}
