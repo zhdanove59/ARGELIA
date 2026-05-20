@@ -1,0 +1,150 @@
+{
+  "project_name": "Algeria Premium Showcase",
+  "theme": "dark",
+  "archetype": "Archetype 5: Jewel & Luxury",
+  "mood": "Elegant, cinematic, emotional, modern, luxury tourism, Netflix documentary style",
+  "colors": {
+    "background": {
+      "primary": "#050505",
+      "secondary": "#0A110D",
+      "tertiary": "#111814"
+    },
+    "text": {
+      "primary": "#FFFFFF",
+      "secondary": "#A3A3A3",
+      "accent": "#D4AF37"
+    },
+    "brand": {
+      "gold": "#D4AF37",
+      "gold_light": "#F3E5AB",
+      "emerald": "#047857",
+      "emerald_dark": "#022C22"
+    },
+    "surface": {
+      "glass": "bg-black/40 backdrop-blur-2xl border border-white/10",
+      "glass_light": "bg-white/5 backdrop-blur-xl border border-white/10",
+      "solid": "bg-[#0A110D] border border-white/5"
+    }
+  },
+  "typography": {
+    "fonts": {
+      "heading": "Cormorant Garamond, serif",
+      "body": "Outfit, sans-serif"
+    },
+    "scales": {
+      "h1": "text-5xl sm:text-6xl lg:text-7xl font-light tracking-tight leading-none",
+      "h2": "text-4xl sm:text-5xl font-light tracking-tight leading-none",
+      "h3": "text-2xl sm:text-3xl font-light tracking-wide",
+      "h4": "text-xl font-medium tracking-wide",
+      "body_large": "text-lg md:text-xl font-light leading-relaxed",
+      "body": "text-base font-light leading-relaxed text-neutral-300",
+      "overline": "text-xs font-semibold uppercase tracking-[0.2em] text-[#D4AF37]"
+    },
+    "instruction": "Do not use standard Inter. Use Cormorant Garamond for all headings. The H1 should feel like a cinematic documentary title."
+  },
+  "layout_and_spacing": {
+    "philosophy": "Generous spacing. Allow images to breathe. High visual impact with asymmetry.",
+    "section_padding": "py-24 md:py-32",
+    "container": "max-w-7xl mx-auto px-6 md:px-12",
+    "grids": {
+      "bento_marketing": "grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-10",
+      "gallery": "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+    }
+  },
+  "motion_and_interactions": {
+    "hover_states": "Cards lift slightly (-translate-y-2) with a glow effect (shadow-[0_0_30px_rgba(212,175,55,0.1)]). Text changes to high contrast.",
+    "page_transitions": "Fade and slow slide up. Staggered reveals for gallery items.",
+    "scroll_effects": "Lenis smooth scroll is MANDATORY. Parallax effects on large images. Sticky headers with backdrop blur.",
+    "micro_interactions": "Animated counters for 'Why Visit' section. Particle effects in the hero section."
+  },
+  "components_strategy": {
+    "buttons": "Glassmorphic or solid Gold. No standard Shadcn primary blue. Example: bg-[#D4AF37] text-black hover:bg-[#F3E5AB] transition-colors rounded-none px-8 py-4 uppercase tracking-widest text-sm.",
+    "cards": "Use 'Crystal Glass' variant. bg-white/5 backdrop-blur-xl border-white/10. Nested radii (max rounded-2xl).",
+    "navigation": "Sticky floating nav. backdrop-blur-xl bg-black/50 border-b border-white/10. Must have language switcher (ES/FR/EN).",
+    "timeline": "Vertical line with glowing gold dots. Cards alternating left and right on desktop.",
+    "map": "Minimalist interactive SVG map or dark mode Framer Motion custom map with glowing emerald pins for cities."
+  },
+  "media": {
+    "hero": {
+      "url": "https://static.prod-images.emergentagent.com/jobs/f7d405cd-ace5-405b-8ae9-5e51cddbb9d7/images/704bc3cf16d84fe5ff2caa4b9bac95fcbca5bfe97ea1ea3713f56c04cf950e54.png",
+      "alt": "Sahara Desert Golden Hour",
+      "usage": "Fullscreen hero background. Apply bg-black/40 overlay."
+    },
+    "abstract_flag": {
+      "url": "https://static.prod-images.emergentagent.com/jobs/f7d405cd-ace5-405b-8ae9-5e51cddbb9d7/images/0de8e0546849ddb20ad322ab269ca0759c7f5d94bafcc14aa0e327be5879506f.png",
+      "alt": "Abstract Algerian Flag Colors",
+      "usage": "Background texture for History or Loading screen."
+    },
+    "landscapes": [
+      {
+        "url": "https://images.unsplash.com/photo-1714313500691-d9d26a075188?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MDV8MHwxfHNlYXJjaHwyfHx0YXNzaWxpJTIwYWxnZXJpYSUyMHJvY2t8ZW58MHx8fHwxNzc5MzE0MzE5fDA&ixlib=rb-4.1.0&q=85",
+        "alt": "Tassili n'Ajjer Rock Formations",
+        "title": "Tassili n'Ajjer"
+      },
+      {
+        "url": "https://images.pexels.com/photos/19720676/pexels-photo-19720676.jpeg",
+        "alt": "Constantine Bridge",
+        "title": "Constantine"
+      },
+      {
+        "url": "https://images.pexels.com/photos/13682900/pexels-photo-13682900.jpeg",
+        "alt": "Casbah de Argel",
+        "title": "Casbah de Argel"
+      },
+      {
+        "url": "https://static.prod-images.emergentagent.com/jobs/f7d405cd-ace5-405b-8ae9-5e51cddbb9d7/images/635db971e016a5e9bdd99ae27e3f3379229714f0cd37e50f26d4f5e1311034c4.png",
+        "alt": "Tipaza Roman Ruins",
+        "title": "Tipaza"
+      }
+    ],
+    "famous_people": [
+      {
+        "url": "https://static.prod-images.emergentagent.com/jobs/f7d405cd-ace5-405b-8ae9-5e51cddbb9d7/images/77519f7a67ff7b73b1cca1eaa1c211c5775c82e7bb317ee1c03fd6bd4805439f.png",
+        "name": "Emir Abdelkader",
+        "description": "Líder histórico y símbolo de la resistencia."
+      },
+      {
+        "url": "https://static.prod-images.emergentagent.com/jobs/f7d405cd-ace5-405b-8ae9-5e51cddbb9d7/images/529b58710d8aaaef9b33d3489aaa0424807957b52c0094a948aeb1c09f258a07.png",
+        "name": "Cheb Khaled",
+        "description": "El Rey del Raï."
+      }
+    ],
+    "gastronomy": [
+      {
+        "url": "https://images.pexels.com/photos/7849287/pexels-photo-7849287.jpeg",
+        "alt": "Couscous",
+        "title": "Couscous Tradicional"
+      },
+      {
+        "url": "https://static.prod-images.emergentagent.com/jobs/f7d405cd-ace5-405b-8ae9-5e51cddbb9d7/images/bef80a266bd82a705f21718d8ede26ead85ad7f9390f2fa4ae67c03ceb98b09e.png",
+        "alt": "Makrout Sweet",
+        "title": "Makrout"
+      },
+      {
+        "url": "https://static.prod-images.emergentagent.com/jobs/f7d405cd-ace5-405b-8ae9-5e51cddbb9d7/images/ecc67f091d9c81403daaed4ee5ac5b604472bea849d9048507b21efcd9b04531.png",
+        "alt": "Mint Tea",
+        "title": "Té de Menta"
+      }
+    ]
+  },
+  "sections_breakdown": {
+    "hero": "Fullscreen height. Cinematic Sahara image. Overlay gradient. Massive 'ARGELIA' heading. Scroll down arrow indicator.",
+    "history": "Animated timeline (Bereber -> Roman -> Ottoman -> French -> Independence). Subtle flag abstract background.",
+    "famous_people": "Horizontal bento or slider with glassmorphism cards. On hover, show info.",
+    "landscapes": "Staggered image grid (Parallax). Tall and square aspect ratios.",
+    "gastronomy": "Elegant cards combining macro food shots with dark overlays and gold typography.",
+    "why_visit": "Metrics grid. Animated counters (e.g., 1.5M Martyrs, 10th Largest Country).",
+    "map": "Interactive points of interest mapping to the landscapes.",
+    "footer": "Massive text 'ARGELIA' in background. 'Presentado por Houari' in center. Social links."
+  },
+  "instructions_to_main_agent": [
+    "Install and use 'framer-motion' for all animations, reveals, and parallax.",
+    "Install and use 'lucide-react' or '@phosphor-icons/react' for elegant thin icons.",
+    "Apply 'Cormorant Garamond' from Google Fonts to index.css and use it for all major headings.",
+    "Ensure the hero image has an overlay (e.g. bg-black/40) so the white text 'ARGELIA' is perfectly legible.",
+    "Use glassmorphism utilities defined in 'surface' for cards. Do NOT use standard flat Shadcn cards.",
+    "Include a language switcher UI in the header (ES, FR, EN).",
+    "Ensure it is fully responsive, as it will be shown via QR code.",
+    "Use the specific media URLs provided. Do not use generic placeholders."
+  ]
+}
