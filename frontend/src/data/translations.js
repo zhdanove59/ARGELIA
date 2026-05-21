@@ -10,6 +10,7 @@ export const translations = {
       gastronomy: "Gastronomía",
       whyVisit: "Por Qué Visitar",
       map: "Mapa",
+      gratitude: "Gracias",
       media: "Galería",
     },
     loading: {
@@ -170,6 +171,21 @@ export const translations = {
       title: "Cartografía del Asombro",
       subtitle: "Haz clic en cada punto para descubrir las joyas de Argelia.",
     },
+    gratitude: {
+      eyebrow: "Capítulo VII",
+      title: "Gracias",
+      school: "CEPA Río Tajo",
+      studentLabel: "Estudiante de español",
+      year: "2025",
+      location: "Con cariño desde España hacia Argelia",
+      signature: "Shukran · Gracias · Merci",
+      message: "Esta presentación nace de la generosidad de mi escuela CEPA Río Tajo, que me dio la oportunidad de compartir con vosotros la belleza, la historia y el alma de mi país. Aprender vuestro idioma me ha permitido contaros Argelia con el corazón. Gracias por abrirme las puertas del español y por inspirarme a contar mi historia.",
+      pillars: [
+        { icon: "✦", title: "Idioma", text: "Aprender español es abrir una ventana a un nuevo mundo de palabras, culturas y amistades." },
+        { icon: "♡", title: "Comunidad", text: "Una escuela acogedora donde cada estudiante encuentra su voz y su lugar." },
+        { icon: "⌂", title: "Puente", text: "Un puente entre España y Argelia, entre dos orillas del Mediterráneo unidas por la cultura." },
+      ],
+    },
     media: {
       eyebrow: "Capítulo VII",
       title: "Argelia en Movimiento",
@@ -199,6 +215,7 @@ export const translations = {
       gastronomy: "Gastronomie",
       whyVisit: "Pourquoi Visiter",
       map: "Carte",
+      gratitude: "Merci",
       media: "Galerie",
     },
     loading: {
@@ -314,6 +331,21 @@ export const translations = {
       title: "Cartographie de l'Émerveillement",
       subtitle: "Cliquez sur chaque point pour découvrir les joyaux de l'Algérie.",
     },
+    gratitude: {
+      eyebrow: "Chapitre VII",
+      title: "Merci",
+      school: "CEPA Río Tajo",
+      studentLabel: "Étudiant d'espagnol",
+      year: "2025",
+      location: "Avec affection depuis l'Espagne vers l'Algérie",
+      signature: "Shukran · Gracias · Merci",
+      message: "Cette présentation est née de la générosité de mon école CEPA Río Tajo, qui m'a donné l'opportunité de partager avec vous la beauté, l'histoire et l'âme de mon pays. Apprendre votre langue m'a permis de vous raconter l'Algérie avec le cœur. Merci de m'avoir ouvert les portes de l'espagnol et de m'avoir inspiré à raconter mon histoire.",
+      pillars: [
+        { icon: "✦", title: "Langue", text: "Apprendre l'espagnol, c'est ouvrir une fenêtre sur un nouveau monde de mots, de cultures et d'amitiés." },
+        { icon: "♡", title: "Communauté", text: "Une école accueillante où chaque étudiant trouve sa voix et sa place." },
+        { icon: "⌂", title: "Pont", text: "Un pont entre l'Espagne et l'Algérie, entre deux rives de la Méditerranée unies par la culture." },
+      ],
+    },
     media: {
       eyebrow: "Chapitre VII",
       title: "L'Algérie en Mouvement",
@@ -343,6 +375,7 @@ export const translations = {
       gastronomy: "Gastronomy",
       whyVisit: "Why Visit",
       map: "Map",
+      gratitude: "Thanks",
       media: "Gallery",
     },
     loading: {
@@ -457,6 +490,21 @@ export const translations = {
       eyebrow: "Chapter VI",
       title: "Cartography of Wonder",
       subtitle: "Click on each point to discover the jewels of Algeria.",
+    },
+    gratitude: {
+      eyebrow: "Chapter VII",
+      title: "Thank You",
+      school: "CEPA Río Tajo",
+      studentLabel: "Spanish language student",
+      year: "2025",
+      location: "With love from Spain to Algeria",
+      signature: "Shukran · Gracias · Thank You",
+      message: "This presentation was born from the generosity of my school CEPA Río Tajo, which gave me the opportunity to share with you the beauty, history and soul of my country. Learning your language allowed me to tell Algeria's story with my heart. Thank you for opening the doors of Spanish to me and for inspiring me to tell my story.",
+      pillars: [
+        { icon: "✦", title: "Language", text: "Learning Spanish is opening a window to a new world of words, cultures and friendships." },
+        { icon: "♡", title: "Community", text: "A welcoming school where every student finds their voice and their place." },
+        { icon: "⌂", title: "Bridge", text: "A bridge between Spain and Algeria, between two shores of the Mediterranean united by culture." },
+      ],
     },
     media: {
       eyebrow: "Chapter VII",
