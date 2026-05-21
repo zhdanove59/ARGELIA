@@ -1,14 +1,42 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { Instagram, Github, Linkedin, Mail, Music2 } from "lucide-react";
+import {
+  Instagram,
+  Github,
+  Linkedin,
+  Mail,
+  Music2,
+} from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import { useLang } from "../context/LanguageContext";
 
 const socials = [
-  { name: "Instagram", icon: Instagram, href: "#", id: "instagram" },
+  {
+    name: "Instagram",
+    icon: Instagram,
+    href: "https://www.instagram.com/inci_zh?igsh=MXZycGZlN3RleHZ4Zw==",
+    id: "instagram",
+  },
   { name: "TikTok", icon: Music2, href: "#", id: "tiktok" },
   { name: "LinkedIn", icon: Linkedin, href: "#", id: "linkedin" },
-  { name: "GitHub", icon: Github, href: "#", id: "github" },
-  { name: "Email", icon: Mail, href: "mailto:#", id: "email" },
+  {
+    name: "GitHub",
+    icon: Github,
+    href: "https://github.com/zhdanove59",
+    id: "github",
+  },
+  {
+    name: "WhatsApp",
+    icon: FaWhatsapp,
+    href: "https://wa.me/34643976794",
+    id: "whatsapp",
+  },
+  {
+    name: "Email",
+    icon: Mail,
+    href: "mailto:thevesthouari@gmail.com",
+    id: "email",
+  },
 ];
 
 export default function Footer() {
@@ -39,10 +67,13 @@ export default function Footer() {
           className="text-center max-w-2xl mx-auto"
         >
           <span className="eyebrow">{t.footer.presented}</span>
+
           <h3 className="font-serif text-6xl md:text-8xl text-white mt-4 leading-none">
             {t.footer.name}
           </h3>
+
           <div className="section-divider my-10" />
+
           <p className="text-neutral-300 italic font-serif text-xl md:text-2xl leading-relaxed">
             "{t.footer.tagline}"
           </p>
@@ -56,9 +87,11 @@ export default function Footer() {
           className="mt-16 flex flex-col items-center gap-8"
         >
           <span className="eyebrow">{t.footer.connect}</span>
+
           <div className="flex flex-wrap items-center justify-center gap-3 md:gap-4">
             {socials.map((s) => {
               const Icon = s.icon;
+
               return (
                 <a
                   key={s.id}
@@ -68,7 +101,11 @@ export default function Footer() {
                   data-testid={`social-${s.id}`}
                   className="group relative w-14 h-14 border border-white/10 hover:border-[#D4AF37] transition-all duration-500 flex items-center justify-center"
                 >
-                  <Icon size={18} className="text-white group-hover:text-[#D4AF37] transition-colors" strokeWidth={1.4} />
+                  <Icon
+                    size={18}
+                    className="text-white group-hover:text-[#D4AF37] transition-colors"
+                  />
+
                   <span className="absolute -bottom-7 text-[10px] tracking-[0.2em] uppercase text-white/0 group-hover:text-white/60 transition-all duration-500">
                     {s.name}
                   </span>
@@ -84,8 +121,10 @@ export default function Footer() {
             <div className="w-2 h-6 flag-bar" />
             <span>ARGELIA · الجزائر</span>
           </div>
+
           <p>{t.footer.copyright}</p>
-          <p>QR · 2025</p>
+
+          <p>QR · 2026</p>
         </div>
       </div>
     </footer>

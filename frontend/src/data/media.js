@@ -159,19 +159,19 @@ export const GASTRONOMY_GALLERIES = [
   { photos: [
       "https://www.recettes.com/wp-content/uploads/2026/02/couscous_algerien-scaled.jpg",
       "https://agrimidi.com/wp-content/uploads/2025/06/Couscous.jpeg",
-      "",
+      "https://www.lesjoyauxdesherazade.com/wp-content/uploads/2017/09/21268785_1409892909078831_564340445_n.jpg",
     ],
   }, // Couscous
   { photos: [
       "https://cuisinezavecdjouza.fr/wp-content/uploads/2017/01/Rechta-sauce-blanche-photo-5.jpg",
       "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Rechta.png/1280px-Rechta.png",
-      "",
+      "https://upload.wikimedia.org/wikipedia/commons/d/d4/Rechtaalgeroise.jpg",
     ],
   }, // Rechta
   { photos: [
       "https://africa-cuisine.com/wp-content/uploads/2023/03/chorba.jpg",
-      "",
-      "",
+      "https://lesucresale-doumsouhaib.com/wp-content/uploads/2018/05/chorba-ramadan.jpg",
+      "https://i.ytimg.com/vi/rOUt7KssK4I/maxresdefault.jpg",
     ],
   }, // Chorba
   { photos: [
