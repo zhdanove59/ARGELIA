@@ -102,7 +102,7 @@ export default function FamousPeople() {
             <PersonCard
               key={p.name}
               person={p}
-              image={PEOPLE_IMAGES[i]?.photos?.[0]}
+              image={PEOPLE_IMAGES[i]?.photos?.find(Boolean)}
               index={i}
               onOpen={setActive}
             />
@@ -126,10 +126,10 @@ export default function FamousPeople() {
             onClick={(e) => e.stopPropagation()}
             className="max-w-4xl w-full glass-dark border-white/10 p-8 md:p-12 grid md:grid-cols-2 gap-10"
           >
-            {PEOPLE_IMAGES[active]?.photos?.[0] ? (
+            {PEOPLE_IMAGES[active]?.photos?.find(Boolean) ? (
               <div
                 className="aspect-[3/4] bg-cover bg-center"
-                style={{ backgroundImage: `url(${PEOPLE_IMAGES[active].photos[0]})` }}
+                style={{ backgroundImage: `url(${PEOPLE_IMAGES[active].photos.find(Boolean)})` }}
               />
             ) : (
               <div className="aspect-[3/4] relative overflow-hidden bg-gradient-to-br from-[#0A110D] via-[#050505] to-[#1a1410] flex items-center justify-center">

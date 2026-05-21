@@ -23,8 +23,9 @@ const spans = [
 
 function LandscapeCard({ item, index, gallery, factText, onOpen }) {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.15 });
-  const cover = gallery?.photos?.[0];
-  const count = gallery?.photos?.length || 0;
+  const cover = gallery?.photos?.find(Boolean);
+  const filled = gallery?.photos?.filter(Boolean).length || 0;
+  const total = gallery?.photos?.length || 0;
 
   return (
     <motion.button
@@ -53,7 +54,7 @@ function LandscapeCard({ item, index, gallery, factText, onOpen }) {
       {/* Photo count badge */}
       <div className="absolute top-5 right-5 flex items-center gap-1.5 px-2.5 py-1 text-[10px] tracking-[0.2em] uppercase text-white/90 border border-white/15 backdrop-blur-md bg-black/30">
         <ImagePlus size={11} strokeWidth={1.4} />
-        {count > 0 ? `${count}` : "—"}
+        {filled > 0 ? `${filled}/${total}` : "Próximamente"}
       </div>
 
       <div className="absolute inset-x-0 bottom-0 p-5 md:p-8">

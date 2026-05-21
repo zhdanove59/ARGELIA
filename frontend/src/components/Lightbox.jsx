@@ -94,10 +94,12 @@ export default function Lightbox({ open, onClose, photos = [], index = 0, onInde
                 data-testid={`lightbox-image-${safeIndex}`}
               />
             ) : (
-              <div className="w-[60vw] h-[60vh] flex flex-col items-center justify-center text-white/40 border border-white/10">
+              <div className="w-[60vw] h-[60vh] flex flex-col items-center justify-center text-white/40 border border-white/10 border-dashed">
                 <ImageOff size={40} strokeWidth={1.2} />
-                <p className="mt-4 text-sm tracking-[0.2em] uppercase">Sin imagen disponible</p>
-                <p className="mt-2 text-xs text-white/30">Añade fotos en <code>src/data/media.js</code></p>
+                <p className="mt-4 text-sm tracking-[0.2em] uppercase text-white/60">Slot disponible</p>
+                <p className="mt-2 text-xs text-white/30 max-w-xs text-center">
+                  Pega aquí una URL de imagen en <code className="text-[#D4AF37]/70">src/data/media.js</code>
+                </p>
               </div>
             )}
           </motion.div>

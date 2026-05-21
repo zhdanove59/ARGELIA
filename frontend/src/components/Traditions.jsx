@@ -18,8 +18,9 @@ const spans = [
 
 function TraditionCard({ item, gallery, index, onOpen }) {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.15 });
-  const cover = gallery?.photos?.[0];
-  const photoCount = gallery?.photos?.length || 0;
+  const cover = gallery?.photos?.find(Boolean);
+  const filled = gallery?.photos?.filter(Boolean).length || 0;
+  const total = gallery?.photos?.length || 0;
   const initials = item.name.split(" ").map((w) => w[0]).slice(0, 2).join("").toUpperCase();
 
   return (
@@ -64,7 +65,7 @@ function TraditionCard({ item, gallery, index, onOpen }) {
 
       {/* Photo count badge */}
       <div className="absolute top-5 right-12 px-2 py-1 text-[10px] tracking-[0.2em] uppercase text-white/80 border border-white/15 backdrop-blur-md bg-black/20">
-        {photoCount > 0 ? `${photoCount} foto${photoCount > 1 ? "s" : ""}` : "Próximamente"}
+        {filled > 0 ? `${filled}/${total} fotos` : "Próximamente"}
       </div>
 
       {/* Content */}
