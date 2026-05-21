@@ -1,28 +1,43 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { ImagePlus } from "lucide-react";
 import { useLang } from "../context/LanguageContext";
-import { GASTRONOMY_IMAGES } from "../data/media";
+import { GASTRONOMY_GALLERIES } from "../data/media";
+import Lightbox from "./Lightbox";
 
-function DishCard({ dish, image, index }) {
+function DishCard({ dish, gallery, index, onOpen }) {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
+  const cover = gallery?.photos?.find(Boolean);
+  const filled = gallery?.photos?.filter(Boolean).length || 0;
+  const total = gallery?.photos?.length || 0;
+
   return (
-    <motion.article
+    <motion.button
       ref={ref}
+      onClick={() => onOpen(index)}
       initial={{ opacity: 0, y: 40 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 1, delay: index * 0.1 }}
       data-testid={`dish-${index}`}
-      className="group relative overflow-hidden bg-[#0A0A0A] border border-white/5"
+      className="group relative overflow-hidden text-left bg-[#0A0A0A] border border-white/5 hover:border-[#D4AF37]/30 transition-colors duration-500"
     >
       <div className="aspect-[4/5] relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#1a1410] via-[#0A110D] to-[#050505]" />
         <div
           className="absolute inset-0 bg-cover bg-center cinematic-img"
-          style={{ backgroundImage: `url(${image})` }}
+          style={{ backgroundImage: `url(${cover})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
         <span className="absolute top-5 left-5 font-serif text-5xl text-white/30 leading-none">
           {String(index + 1).padStart(2, "0")}
         </span>
+
+        {/* Photo count badge */}
+        <div className="absolute top-5 right-5 flex items-center gap-1.5 px-2.5 py-1 text-[10px] tracking-[0.2em] uppercase text-white/90 border border-white/15 backdrop-blur-md bg-black/30">
+          <ImagePlus size={11} strokeWidth={1.4} />
+          {filled > 0 ? `${filled}/${total}` : "Próximamente"}
+        </div>
       </div>
       <div className="p-6 md:p-8">
         <h3 className="font-serif text-2xl md:text-3xl text-white">{dish.name}</h3>
@@ -31,13 +46,18 @@ function DishCard({ dish, image, index }) {
           {dish.desc}
         </p>
       </div>
-    </motion.article>
+    </motion.button>
   );
 }
 
 export default function Gastronomy() {
   const { t } = useLang();
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
+  const [activeIdx, setActiveIdx] = useState(null);
+  const [photoIdx, setPhotoIdx] = useState(0);
+
+  const open = (i) => { setActiveIdx(i); setPhotoIdx(0); };
+  const close = () => setActiveIdx(null);
 
   return (
     <section
@@ -68,12 +88,23 @@ export default function Gastronomy() {
             <DishCard
               key={dish.name}
               dish={dish}
-              image={GASTRONOMY_IMAGES[i] || GASTRONOMY_IMAGES[0]}
+              gallery={GASTRONOMY_GALLERIES[i]}
               index={i}
+              onOpen={open}
             />
           ))}
         </div>
       </div>
+
+      <Lightbox
+        open={activeIdx !== null}
+        onClose={close}
+        photos={activeIdx !== null ? (GASTRONOMY_GALLERIES[activeIdx]?.photos || []) : []}
+        index={photoIdx}
+        onIndexChange={setPhotoIdx}
+        title={activeIdx !== null ? t.gastronomy.list[activeIdx]?.name : ""}
+        subtitle={t.gastronomy.eyebrow}
+      />
     </section>
   );
 }
