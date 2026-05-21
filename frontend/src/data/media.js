@@ -153,7 +153,7 @@ export const LANDSCAPE_GALLERIES = [
 ];
 
 // ---------------------------------------------------------------------------
-// GASTRONOMY — 3 slots per dish.
+// GASTRONOMY — multiple slots per dish.
 // ---------------------------------------------------------------------------
 export const GASTRONOMY_GALLERIES = [
   { photos: [
@@ -163,67 +163,75 @@ export const GASTRONOMY_GALLERIES = [
     ],
   }, // Couscous
   { photos: [
-      "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=80",
-      "",
+      "https://cuisinezavecdjouza.fr/wp-content/uploads/2017/01/Rechta-sauce-blanche-photo-5.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Rechta.png/1280px-Rechta.png",
       "",
     ],
   }, // Rechta
   { photos: [
-      "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=80",
+      "https://africa-cuisine.com/wp-content/uploads/2023/03/chorba.jpg",
       "",
       "",
     ],
   }, // Chorba
   { photos: [
+      "https://gourmandiseassia.fr/wp-content/uploads/2020/08/20200829_163556-01-640x853.jpeg",
+      "https://www.visa-algerie.com/wp-content/uploads/2025/12/makrout.png",
       "https://static.prod-images.emergentagent.com/jobs/f7d405cd-ace5-405b-8ae9-5e51cddbb9d7/images/bef80a266bd82a705f21718d8ede26ead85ad7f9390f2fa4ae67c03ceb98b09e.png",
-      "",
-      "",
     ],
   }, // Makrout
   { photos: [
+      "https://www.amourdecuisine.fr/wp-content/uploads/2019/07/th%C3%A9-a-la-menthe-016.jpg",
+      "https://img.cuisineaz.com/660x495/2019/10/28/i150364-the-a-la-menthe-au-thermomix.jpeg",
       "https://static.prod-images.emergentagent.com/jobs/f7d405cd-ace5-405b-8ae9-5e51cddbb9d7/images/ecc67f091d9c81403daaed4ee5ac5b604472bea849d9048507b21efcd9b04531.png",
-      "",
-      "",
     ],
   }, // Té de menta
 ];
 
 // ---------------------------------------------------------------------------
-// TRADITIONS & TRADITIONAL DRESS — 3 slots per item.
-// Slots [1] and [2] are empty for you to fill with your own photos.
+// TRADITIONS & TRADITIONAL DRESS — multiple slots per item.
 // ---------------------------------------------------------------------------
 export const TRADITION_GALLERIES = [
   { // 0 Karakou
+    // NOTE: The Facebook CDN URL (scontent-...fbcdn.net) below expires quickly. Re-host for permanence.
     photos: [
-      "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=1200&q=80",
-      "",
-      "",
+      "https://scontent-mad1-1.xx.fbcdn.net/v/t51.75761-15/498241678_18391423270116240_7891803862978009149_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=7To88p9utmMQ7kNvwFBua4I&_nc_oc=AdoUkJJq9_qM2l9fiUZ8zvf5NXc-VDpTNq0vVklnLXnBR2sLmP8yyhHTyW7hNPb-xwU&_nc_zt=23&_nc_ht=scontent-mad1-1.xx&_nc_gid=TI1Qr4P8fTGDq-prbyEGRQ&_nc_ss=7b2a8&oh=00_Af5f3NQepbvt4B_MWPUPumMAnKVKMmSPnqUvN0LQkT0lTQ&oe=6A14C58D",
+      "https://maison-zirya.fr/wp-content/uploads/2025/01/WhatsApp-Image-2025-03-13-at-22.07.40.jpeg",
+      "https://www.orientaletendance.com/10094-large_default/karakou-afaf-bleu.jpg",
     ],
   },
   { // 1 Haïk
     photos: [
-      "https://images.unsplash.com/photo-1564257631407-4deb1f99d992?auto=format&fit=crop&w=1200&q=80",
-      "",
+      "https://i.pinimg.com/736x/61/b0/ac/61b0ac27a47fab41e5c09b44162e5d1d.jpg",
+      "https://i.pinimg.com/736x/8c/fb/18/8cfb181f21cb43867d29ffb093422d0f.jpg",
       "",
     ],
   },
   { // 2 Chedda de Tlemcen
-    photos: ["", "", ""],
+    photos: [
+      "https://upload.wikimedia.org/wikipedia/commons/c/c0/Chedda_de_Tlemcen_Modern_red_01.jpg",
+      "https://www.dzirielle.com/mode/traditions/chedda-tlemcenia-un-heritage-royal-ne-a-tlemcen.webp",
+      "",
+    ],
   },
   { // 3 Burnous
-    photos: ["", "", ""],
+    photos: [
+      "https://ziricouture.com/cdn/shop/files/5_d87afc82-8527-4c93-a8fe-6e7718c6ba31.png?v=1747833173&width=1946",
+      "https://www.orientaletendance.com/11824-large_default/burnous-kabyle-de-ceremonie.jpg",
+      "",
+    ],
   },
   { // 4 Robe Kabyle
     photos: [
-      "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1200&q=80",
-      "",
-      "",
+      "https://www.orientaletendance.com/10921-large_default/robe-kabyle-leila.jpg",
+      "https://www.orientaletendance.com/10276-large_default/robe-kabyle-tina.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/7/73/Berb%C3%A8res_folklore_Algeria.jpg",
     ],
   },
   { // 5 Bijoux Berbères
     photos: [
-      "https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?auto=format&fit=crop&w=1200&q=80",
-      "",
+      "https://i.pinimg.com/736x/01/47/51/014751cd4affa7b32f4c437bf65abebe.jpg",
+      "https://i.pinimg.com/736x/0a/f6/1c/0af61c2d94a80bdaf4e1f616a7e0f30b.jpg",
       "",
     ],
   },
