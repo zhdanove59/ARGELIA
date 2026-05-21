@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/ARGELIA/static/css/main.aba420fa.css",
-    "main.js": "/ARGELIA/static/js/main.cdfac921.js",
+    "main.js": "/ARGELIA/static/js/main.f61ade37.js",
     "static/media/Arabolical.ttf": "/ARGELIA/static/media/Arabolical.356df65aecda90db84f0.ttf",
     "index.html": "/ARGELIA/index.html",
     "main.aba420fa.css.map": "/ARGELIA/static/css/main.aba420fa.css.map",
-    "main.cdfac921.js.map": "/ARGELIA/static/js/main.cdfac921.js.map"
+    "main.f61ade37.js.map": "/ARGELIA/static/js/main.f61ade37.js.map"
   },
   "entrypoints": [
     "static/css/main.aba420fa.css",
-    "static/js/main.cdfac921.js"
+    "static/js/main.f61ade37.js"
   ]
 }
