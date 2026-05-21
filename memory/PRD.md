@@ -14,6 +14,18 @@ Premium modern cinematic showcase website about Algeria for an international sch
 - **Houari** (presenter): showcases Algeria to a Spanish school audience by sharing a QR code.
 - **Audience**: International students/teachers in Spain, scanning the QR on a phone.
 
+## Implementation — Dec 2025 (v2 update)
+- Fullscreen `Lightbox` gallery component (React portal) with prev/next arrows, keyboard nav (Esc/←/→), thumbnail strip, photo counter, fallback "Sin imagen disponible" for empty galleries.
+- New section **Tradiciones y Vestimenta** (between Gastronomy and Why Visit) with 6 cards: Karakou, Haïk, Chedda de Tlemcen, Burnous, Robe Kabyle, Joyas Bereberes.
+- Refactored `src/data/media.js` to expose extensible galleries:
+  - `LANDSCAPE_GALLERIES[i].photos = [...]`
+  - `TRADITION_GALLERIES[i].photos = [...]`
+  - `PEOPLE_IMAGES[i].photos = [...]`
+  → Users can simply add more URLs to any `photos` array and the lightbox automatically paginates them.
+- Landscape cards now show a photo-count badge (image-plus icon + number).
+- Tradition cards show "1 foto" or "Próximamente" depending on whether photos are available.
+- Navigation header automatically receives extra "Tradiciones" link in all 3 languages.
+
 ## Implementation — Dec 2025 (v1)
 - 11 React components with cinematic Framer Motion reveals, parallax hero, particles canvas, glassmorphism.
 - Tri-lingual content in `src/data/translations.js` (ES default, FR, EN) consumed via `LanguageContext`.

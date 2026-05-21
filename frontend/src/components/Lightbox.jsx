@@ -1,4 +1,5 @@
 import { useEffect, useCallback } from "react";
+import { createPortal } from "react-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, X, ImageOff } from "lucide-react";
 
@@ -40,7 +41,7 @@ export default function Lightbox({ open, onClose, photos = [], index = 0, onInde
     };
   }, [open, onClose, next, prev]);
 
-  return (
+  return createPortal(
     <AnimatePresence>
       {open && (
         <motion.div
@@ -141,6 +142,7 @@ export default function Lightbox({ open, onClose, photos = [], index = 0, onInde
           )}
         </motion.div>
       )}
-    </AnimatePresence>
+    </AnimatePresence>,
+    document.body
   );
 }
