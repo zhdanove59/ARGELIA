@@ -51,7 +51,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 3.0, duration: 1.3, ease: [0.16, 1, 0.3, 1] }}
-          className="font-serif text-7xl sm:text-8xl md:text-[10rem] lg:text-[13rem] font-light leading-[0.9] tracking-[0.04em] text-white"
+          className="font-arabolical text-7xl sm:text-8xl md:text-[10rem] lg:text-[13rem] font-light leading-[0.9] tracking-[0.04em] text-white"
           data-testid="hero-title-main"
         >
           {t.hero.title1}
