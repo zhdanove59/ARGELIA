@@ -11,7 +11,6 @@ import Gastronomy from "./components/Gastronomy";
 import Traditions from "./components/Traditions";
 import WhyVisit from "./components/WhyVisit";
 import AlgeriaMap from "./components/AlgeriaMap";
-import Media from "./components/Media";
 import Footer from "./components/Footer";
 import Particles from "./components/Particles";
 
@@ -38,7 +37,6 @@ function App() {
           <Traditions />
           <WhyVisit />
           <AlgeriaMap />
-          <Media />
           <Footer />
         </main>
       </div>

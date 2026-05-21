@@ -12,7 +12,6 @@ const sections = [
   { id: "traditions", key: "traditions" },
   { id: "whyvisit", key: "whyVisit" },
   { id: "map", key: "map" },
-  { id: "media", key: "media" },
 ];
 
 const langLabels = { es: "ES", fr: "FR", en: "EN" };
