@@ -58,13 +58,13 @@ export default function Hero() {
             const txt = t.hero.title1;
             const iIdx = txt.indexOf("I");
             if (iIdx === -1) {
-              return <span className="text-[#006233]">{txt}</span>;
+              return <span className="text-white">{txt}</span>;
             }
             return (
               <>
-                <span className="text-[#006233]">{txt.slice(0, iIdx)}</span>
+                <span className="text-white">{txt.slice(0, iIdx)}</span>
                 <span className="text-[#D21034]">{txt[iIdx]}</span>
-                <span className="text-[#006233]">{txt.slice(iIdx + 1)}</span>
+                <span className="text-white">{txt.slice(iIdx + 1)}</span>
               </>
             );
           })()}
