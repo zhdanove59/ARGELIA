@@ -230,6 +230,47 @@ export const TRADITION_GALLERIES = [
 ];
 
 // ---------------------------------------------------------------------------
+// HISTORY ERAS — photos for the timeline cards. Order matches translations.js eras.
+// ---------------------------------------------------------------------------
+export const HISTORY_GALLERIES = [
+  { // 0 Civilización Bereber
+    photos: [
+      "https://static.eldiario.es/clip/5937fd93-aab0-4212-adc3-7ee1a6132da7_16-9-discover-aspect-ratio_default_0.jpg",
+      "",
+      "",
+    ],
+  },
+  { // 1 Época Romana
+    photos: [
+      "https://www.worldhistory.org/img/r/p/1500x1500/16832.jpg",
+      "",
+      "",
+    ],
+  },
+  { // 2 Imperio Otomano
+    photos: [
+      "https://i.dzs.cloud/dhakira.echaab.dz/static/medias/2025/11/9edd276aa731d07a3d28464b72815137.jpg?w=600&ssl=1",
+      "",
+      "",
+    ],
+  },
+  { // 3 Colonización Francesa
+    photos: [
+      "https://orientxxi.info/IMG/logo/omar-2.jpg?1686785545",
+      "https://caus.org.lb/wp-content/uploads/2022/01/The-colonial-legacy-in-Algerian-French-relations-ar.jpg",
+      "",
+    ],
+  },
+  { // 4 Independencia
+    photos: [
+      "https://prod.cdn-medias.jeuneafrique.com/cdn-cgi/image/q=auto,f=auto,metadata=none,width=1215,fit=cover/https://prod.cdn-medias.jeuneafrique.com/medias/2012/07/05/002072012124523000000JA2686p060-062_01.jpg",
+      "https://www.en-attendant-nadeau.fr/wp-content/uploads/2022/03/rahal-2.jpg",
+      "",
+    ],
+  },
+];
+
+// ---------------------------------------------------------------------------
 // VIDEOS — Media section thumbnails (replace with real YouTube/Vimeo IDs)
 // ---------------------------------------------------------------------------
 export const MEDIA_THUMBS = [
