@@ -8,6 +8,7 @@ import History from "./components/History";
 import FamousPeople from "./components/FamousPeople";
 import Landscapes from "./components/Landscapes";
 import Gastronomy from "./components/Gastronomy";
+import Traditions from "./components/Traditions";
 import WhyVisit from "./components/WhyVisit";
 import AlgeriaMap from "./components/AlgeriaMap";
 import Media from "./components/Media";
@@ -34,6 +35,7 @@ function App() {
           <FamousPeople />
           <Landscapes />
           <Gastronomy />
+          <Traditions />
           <WhyVisit />
           <AlgeriaMap />
           <Media />

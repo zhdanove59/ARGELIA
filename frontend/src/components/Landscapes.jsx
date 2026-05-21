@@ -1,8 +1,10 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { MapPin, Sparkles } from "lucide-react";
+import { MapPin, Sparkles, ImagePlus } from "lucide-react";
 import { useLang } from "../context/LanguageContext";
-import { LANDSCAPE_IMAGES } from "../data/media";
+import { LANDSCAPE_GALLERIES } from "../data/media";
+import Lightbox from "./Lightbox";
 
 // Bento spans designed to tile cleanly on a 6-col grid (no overlaps).
 const spans = [
@@ -19,22 +21,26 @@ const spans = [
   "md:col-span-3",                // 10 Hamma
 ];
 
-function LandscapeCard({ item, index, image, factText }) {
+function LandscapeCard({ item, index, gallery, factText, onOpen }) {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.15 });
+  const cover = gallery?.photos?.[0];
+  const count = gallery?.photos?.length || 0;
+
   return (
-    <motion.div
+    <motion.button
       ref={ref}
+      onClick={() => onOpen(index)}
       initial={{ opacity: 0, y: 60 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 1, delay: (index % 5) * 0.08, ease: [0.16, 1, 0.3, 1] }}
       data-testid={`landscape-card-${index}`}
-      className={`group relative overflow-hidden ${spans[index] || ""} min-h-[280px] md:min-h-[320px]`}
+      className={`group relative overflow-hidden text-left ${spans[index] || ""} min-h-[280px] md:min-h-[320px]`}
     >
       {/* Base gradient fallback always present underneath */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#1a1410] via-[#0A110D] to-[#050505]" />
       <div
         className="absolute inset-0 bg-cover bg-center cinematic-img"
-        style={{ backgroundImage: `url(${image})` }}
+        style={{ backgroundImage: `url(${cover})` }}
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
       <div className="absolute inset-0 bg-black/15 group-hover:bg-black/5 transition-colors duration-700" />
@@ -42,6 +48,12 @@ function LandscapeCard({ item, index, image, factText }) {
       <div className="absolute top-5 left-5 flex items-center gap-2">
         <MapPin size={12} className="text-[#D4AF37]" strokeWidth={1.5} />
         <span className="eyebrow text-[10px]">{item.region}</span>
+      </div>
+
+      {/* Photo count badge */}
+      <div className="absolute top-5 right-5 flex items-center gap-1.5 px-2.5 py-1 text-[10px] tracking-[0.2em] uppercase text-white/90 border border-white/15 backdrop-blur-md bg-black/30">
+        <ImagePlus size={11} strokeWidth={1.4} />
+        {count > 0 ? `${count}` : "—"}
       </div>
 
       <div className="absolute inset-x-0 bottom-0 p-5 md:p-8">
@@ -58,18 +70,23 @@ function LandscapeCard({ item, index, image, factText }) {
           </div>
         )}
       </div>
-    </motion.div>
+    </motion.button>
   );
 }
 
 export default function Landscapes() {
   const { t } = useLang();
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
+  const [activeIdx, setActiveIdx] = useState(null);
+  const [photoIdx, setPhotoIdx] = useState(0);
 
   const facts = {
     0: t.landscapes.facts.tassili,
     7: t.landscapes.facts.hammam,
   };
+
+  const open = (i) => { setActiveIdx(i); setPhotoIdx(0); };
+  const close = () => setActiveIdx(null);
 
   return (
     <section
@@ -101,12 +118,23 @@ export default function Landscapes() {
               key={item.name}
               item={item}
               index={i}
-              image={LANDSCAPE_IMAGES[i] || LANDSCAPE_IMAGES[0]}
+              gallery={LANDSCAPE_GALLERIES[i]}
               factText={facts[i]}
+              onOpen={open}
             />
           ))}
         </div>
       </div>
+
+      <Lightbox
+        open={activeIdx !== null}
+        onClose={close}
+        photos={activeIdx !== null ? (LANDSCAPE_GALLERIES[activeIdx]?.photos || []) : []}
+        index={photoIdx}
+        onIndexChange={setPhotoIdx}
+        title={activeIdx !== null ? t.landscapes.list[activeIdx]?.name : ""}
+        subtitle={activeIdx !== null ? t.landscapes.list[activeIdx]?.region : ""}
+      />
     </section>
   );
 }

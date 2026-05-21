@@ -9,6 +9,7 @@ const sections = [
   { id: "people", key: "people" },
   { id: "landscapes", key: "landscapes" },
   { id: "gastronomy", key: "gastronomy" },
+  { id: "traditions", key: "traditions" },
   { id: "whyvisit", key: "whyVisit" },
   { id: "map", key: "map" },
   { id: "media", key: "media" },
